@@ -1,0 +1,14 @@
+version: '3'
+services:
+  front:
+    image: searchme-front:latest
+    container_name: me_front
+    ports:
+      - 3000:3000
+    depends_on:
+      - back
+  back:
+    image: searchme-back:latest
+    container_name: me_back
+    ports:
+      - 5000:5000
